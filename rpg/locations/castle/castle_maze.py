@@ -1,5 +1,4 @@
 from rpg.locations import Location
-from rpg.locations.castle.castle_insides import BackAtCastleInside
 from rpg.objects.potion import Potion
 from rpg.objects.key import Keys
 
@@ -20,7 +19,11 @@ class CastleMaze(Location):
         return CastleMaze5
 
     def go_south(self):
-        return BackAtCastleInside
+        from rpg.locations.castle.castle_insides import (
+            BackAtCastleInsideFromMaze,
+        )
+
+        return BackAtCastleInsideFromMaze
 
 
 class CastleMaze2(CastleMaze):
@@ -77,7 +80,11 @@ class CastleMaze4(CastleMaze):
         return CastleMaze5
 
     def go_west(self):
-        return BackAtCastleInside
+        from rpg.locations.castle.castle_insides import (
+            BackAtCastleInsideFromMaze,
+        )
+
+        return BackAtCastleInsideFromMaze
 
     def go_north(self):
         print(

@@ -4,7 +4,6 @@ from rpg.game_over import GameOver
 from rpg.locations import Location
 from rpg.locations.castle.castle_entrance import Castle
 from rpg.locations.guardian_cabin import GuardianCabin
-from rpg.objects.key import Keys
 
 _SPIDER_DEAFEATED = False
 _BOAR_DEAFEATED = False

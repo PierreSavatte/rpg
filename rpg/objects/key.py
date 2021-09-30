@@ -2,7 +2,7 @@ from enum import Enum
 
 from rpg.objects import Object
 from rpg.locations.castle.castle_entrance import Castle
-from rpg.locations.castle.castle_insides import CastleBoss
+from rpg.locations.castle.castle_insides import CastleBossDoor
 
 
 class Key(Object):
@@ -30,6 +30,6 @@ class Keys(Enum):
         correct_place=Castle,
     )
     CASTLE_BOSS = Key(
-        success_message="You used the key to open the door of the archduke.",
-        correct_place=CastleBoss,
+        success_message="You used the key to open the large door.",
+        correct_place=CastleBossDoor,
     )
