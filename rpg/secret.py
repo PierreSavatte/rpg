@@ -15,7 +15,7 @@ def motherlode(game):
 
 def doom_god_mode(game):
     print("You are now a god.")
-    self.player.is_a_god = True
+    game.player.is_a_god = True
     game.player.life_points = math.inf
     game.player.strength = math.inf
 

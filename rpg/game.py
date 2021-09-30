@@ -65,11 +65,15 @@ class Game:
         print(
             "You suck. Except if you're Eric, at least you knew where to go at the carrefour."
         )
-        print("@eric: I would like to have 18/10/21 - 22/10/21 as vacations please. :)")
+        print(
+            "@eric: I would like to have 18/10/21 - 22/10/21 as vacations please. :)"
+        )
         sys.exit()
 
     def win(self):
         print(f"Congratulations {self.player.name}, you have won!")
         print("Thank you for playing this game.")
-        print("@eric: I would like to have 18/10/21 - 22/10/21 as vacations please. :)")
+        print(
+            "@eric: I would like to have 18/10/21 - 22/10/21 as vacations please. :)"
+        )
         sys.exit()

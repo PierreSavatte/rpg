@@ -1,11 +1,9 @@
-import math
-
+from rpg.character import Character
+from rpg.fight import Fight
+from rpg.game_over import GameOver
 from rpg.locations import Location
 from rpg.locations.castle.castle_entrance import Castle
 from rpg.locations.guardian_cabin import GuardianCabin
-from rpg.fight import Fight
-from rpg.character import Character
-from rpg.game_over import GameOver
 from rpg.objects.key import Keys
 
 _SPIDER_DEAFEATED = False
@@ -132,7 +130,9 @@ class ForestEntry(Forest):
 
 class ForestDepth(Location):
     def welcome_message(self):
-        return "You decide to continue ahead. You enter the depths of the forest."
+        return (
+            "You decide to continue ahead. You enter the depths of the forest."
+        )
 
     def go_north(self):
         return ForestWrongDirection

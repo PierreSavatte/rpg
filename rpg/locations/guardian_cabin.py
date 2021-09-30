@@ -5,7 +5,9 @@ from rpg.objects.key import Keys
 class GuardianCabin(Location):
     CHOICES = ["go_east", "search"]
 
-    INCORRECT_INPUT_MESSAGE = "You cannot do that action. This is a very small place."
+    INCORRECT_INPUT_MESSAGE = (
+        "You cannot do that action. This is a very small place."
+    )
 
     def welcome_message(self):
         return (

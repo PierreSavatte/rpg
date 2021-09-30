@@ -115,9 +115,7 @@ class CastleMazeChest(CastleMaze):
     CHOICES = ["go_south", "open_chest"]
 
     def welcome_message(self):
-        return (
-            "You enter a small room. There is a chest. You can try to open the chest."
-        )
+        return "You enter a small room. There is a chest. You can try to open the chest."
 
     def open_chest(self):
         print("You approaches the chest. You find a potion.")
