@@ -1,3 +1,5 @@
+import math
+
 from rpg.locations import Location
 from rpg.locations.castle.castle_entrance import Castle
 from rpg.locations.guardian_cabin import GuardianCabin
@@ -37,7 +39,7 @@ def fight_spider(location: Location):
             _SPIDER_DEAFEATED = True
             return ForestEntry
         else:
-            print("You have been defeated by the spider (looser...).")
+            print("You have been defeated by the spider (loser...).")
             return GameOver
     else:
         print(
@@ -82,6 +84,10 @@ class Forest(Location):
         return GuardianCabin
 
     def go_up(self):
+        if not self.game.player.is_a_god:
+            print("Who do you think you are, to try and defy gravity?")
+            return ForestEntry
+
         from rpg.locations.castle.castle_insides import CastleBoss
 
         print("You are a real Chad and don't follow orders.")
