@@ -93,7 +93,7 @@ class CastleBoss(Location):
             )
             time.sleep(3)
             print(
-                "You cannot help looking at the scroll once mounted on your hose. You recognize the writing, "
+                "You cannot help looking at the scroll once mounted on your horse. You recognize the writing, "
                 "it's common tongue. It says:"
             )
             time.sleep(3)
