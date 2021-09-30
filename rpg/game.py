@@ -1,5 +1,6 @@
 import sys
 import attr
+import time
 
 from rpg.character import Character
 from rpg.input import ask
@@ -43,6 +44,24 @@ class Game:
             count_as_action = True
             already_processed = True
             self.bag.use(game=self, object_name=decision)
+
+        elif decision.startswith("cry"):
+            print(
+                "You are starting to lie on the ground to cry. You feel lost."
+            )
+            time.sleep(5)
+            print(
+                "After a few minutes you gather the rest of your strengths to continue. Your psy would be proud of you."
+            )
+            count_as_action = True
+            already_processed = True
+
+        elif decision.startswith("help"):
+            print(
+                "You cry for help. Unfortunately you don't hear any friendly soul answering you."
+            )
+            count_as_action = True
+            already_processed = True
 
         elif decision == "quit":
             print("You quitter...")
