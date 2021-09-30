@@ -105,21 +105,13 @@ class Forest(Location):
         return ForestEntry
 
     def search(self):
-        if Keys.CASTLE_ENTRY not in self.game.bag.keys:
-            print(
-                "You are looking at the ground. "
-                "You find all kinds of skeletons. "
-                "You're starting to wonder if maaaaybe this wasn't such a good idea, despite being a proud Bridge Cult Viking."
-            )
-            print(
-                "Finally you find a rather old and rusty key. "
-                "It seems to open something important."
-            )
-            self.game.object_received(Keys.CASTLE_ENTRY)
-        else:
-            print(
-                "You are continuing searching for useful things but nothing appears to be of any use."
-            )
+        print(
+            "You are looking at the ground. "
+            "You find all kinds of skeletons rests. "
+            "You become really afraid suddenly. "
+            "To you it's a a bad omen, you believe a lot of adventurers already visited this forest."
+            "You're starting to wonder if maybe this wasn't such a good idea."
+        )
         return ForestEntry
 
 
