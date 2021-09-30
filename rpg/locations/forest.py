@@ -105,7 +105,7 @@ class Forest(Location):
             print(
                 "You are looking at the ground. "
                 "You find all kinds of skeletons. "
-                "You feel a tiny bit scared, despite being a proud Bridge Cultist."
+                "You're starting to wonder if maaaaybe this wasn't such a good idea, despite being a proud Bridge Cult Viking."
             )
             print(
                 "Finally you find a rather old and rusty key. "
