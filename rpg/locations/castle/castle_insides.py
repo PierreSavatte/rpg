@@ -3,11 +3,13 @@ import time
 
 
 class CastleInside(Location):
-    CHOICES = ["shout", "go_north", "go_south"]
+    CHOICES = ["shout", "go_north", "go_south", "go_east"]
 
     def welcome_message(self):
-        print("You step inside the castle. ")
-        print("You see long corridor at each directions in front of you.")
+        return (
+            "You step inside the castle. "
+            "You see long corridor at each directions in front of you."
+        )
 
     def go_south(self):
         from rpg.locations.castle.castle_entrance import (
@@ -16,6 +18,12 @@ class CastleInside(Location):
 
         print("You choose to go back. Coward...")
         return CastleDoorReturned
+
+    def go_east(self):
+        from rpg.locations.castle.castle_maze import CastleMaze
+
+        print("You choose to go east. Is that a minotaur?")
+        return CastleMaze
 
     def go_north(self):
         print(

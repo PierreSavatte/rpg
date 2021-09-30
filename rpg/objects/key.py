@@ -17,9 +17,7 @@ class Key(Object):
                 print(self.success_message)
                 self.door_opened = True
             else:
-                print(
-                    "You found the correct key, but the door is already open."
-                )
+                print("You found the correct key, but the door is already open.")
             return True
         return False
 

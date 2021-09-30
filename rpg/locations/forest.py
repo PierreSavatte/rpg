@@ -4,6 +4,7 @@ from rpg.locations.guardian_cabin import GuardianCabin
 from rpg.fight import Fight
 from rpg.character import Character
 from rpg.game_over import GameOver
+from rpg.objects.key import Keys
 
 _SPIDER_DEAFEATED = False
 _BOAR_DEAFEATED = False
@@ -47,7 +48,7 @@ def fight_spider(location: Location):
 
 
 class Forest(Location):
-    CHOICES = ["go_north", "go_south", "go_east", "go_west", "go_up"]
+    CHOICES = ["go_north", "go_south", "go_east", "go_west", "go_up", "search"]
 
     def welcome_message(self):
         print(
@@ -99,6 +100,24 @@ class Forest(Location):
         )
         return ForestEntry
 
+    def search(self):
+        if Keys.CASTLE_ENTRY not in self.game.bag.keys:
+            print(
+                "You are looking at the ground. "
+                "You find all kinds of skeletons. "
+                "You're starting to wonder if maaaaybe this wasn't such a good idea, despite being a proud Bridge Cult Viking."
+            )
+            print(
+                "Finally you find a rather old and rusty key. "
+                "It seems to open something important."
+            )
+            self.game.object_received(Keys.CASTLE_ENTRY)
+        else:
+            print(
+                "You are continuing searching for useful things but nothing appears to be of any use."
+            )
+        return ForestEntry
+
 
 class ForestEntry(Forest):
     def welcome_message(self):
@@ -107,9 +126,7 @@ class ForestEntry(Forest):
 
 class ForestDepth(Location):
     def welcome_message(self):
-        return (
-            "You decide to continue ahead. You enter the depths of the forest."
-        )
+        return "You decide to continue ahead. You enter the depths of the forest."
 
     def go_north(self):
         return ForestWrongDirection
