@@ -18,7 +18,7 @@ class Fight:
         print(message)
 
     def deal_damage(self, attacker, defender, damage):
-        attacker.life_points -= damage
+        defender.life_points -= damage
 
         if defender.life_points <= damage:
             print(f"{defender.name} seems really weak now...")

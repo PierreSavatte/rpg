@@ -37,7 +37,7 @@ def fight_spider(location: Location):
             _SPIDER_DEAFEATED = True
             return ForestEntry
         else:
-            print("You have been defeated by the spider (looser...).")
+            print("You have been defeated by the spider (loser...).")
             return GameOver
     else:
         print(
