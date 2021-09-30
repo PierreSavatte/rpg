@@ -16,7 +16,7 @@ class Castle(Location):
         from rpg.objects.key import Keys
 
         if Keys.CASTLE_ENTRY in self.game.bag.keys:
-            if Keys.CASTLE_ENTRY.value.door_opened:
+            if not Keys.CASTLE_ENTRY.value.door_opened:
                 print(
                     "You look at the old and rusty lock. "
                     "It looks a lot like the key you got at the entry of the forest."
