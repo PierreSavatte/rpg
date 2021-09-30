@@ -21,7 +21,7 @@ class GuardianCabin(Location):
         return ForestEntry
 
     def search(self):
-        if Keys.CASTLE_BOSS not in self.game.bag.keys:
+        if Keys.CASTLE_ENTRY not in self.game.bag.keys:
             print(
                 "You are looking through the guard's things. "
                 "You find all kinds of trinkets."
@@ -30,7 +30,7 @@ class GuardianCabin(Location):
                 "Finally you find a rather complex rusty key. "
                 "It seems to open something important."
             )
-            self.game.object_received(Keys.CASTLE_BOSS)
+            self.game.object_received(Keys.CASTLE_ENTRY)
         else:
             print(
                 "You are continuing searching for useful things but nothing appears to be of any use."
