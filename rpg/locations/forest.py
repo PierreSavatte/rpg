@@ -131,7 +131,10 @@ class ForestEntry(Forest):
 class ForestDepth(Location):
     def welcome_message(self):
         return (
-            "You decide to continue ahead. You enter the depths of the forest."
+            "You decide to continue ahead. You enter the depths of the forest. "
+            "There is a strange shop on your right. "
+            "You believe it's a wizard's shop since it generates a lot of light. "
+            "You can see a strange diamond-shaped sign on the shopfront. You decide to ignore it"
         )
 
     def go_north(self):
