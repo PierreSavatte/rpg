@@ -1,6 +1,7 @@
 from rpg.locations import Location
 from rpg.locations.castle.castle_insides import BackAtCastleInside
 from rpg.objects.potion import Potion
+from rpg.objects.key import Keys
 
 
 class CastleMaze(Location):
@@ -118,8 +119,10 @@ class CastleMazeChest(CastleMaze):
         return "You enter a small room. There is a chest. You can try to open the chest."
 
     def open_chest(self):
-        print("You approaches the chest. You find a potion.")
+        print("You approaches the chest. You find a potion!")
         self.game.object_received(Potion(power=40))
+        print("You find an ancient key that seems to open a large door.")
+        self.game.object_received(Keys.CASTLE_BOSS)
         print("You go back into the maze.")
         return CastleMaze3
 
