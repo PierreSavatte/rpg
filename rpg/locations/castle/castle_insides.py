@@ -99,7 +99,7 @@ class CastleBoss(Location):
             time.sleep(3)
             print(
                 """
-                Dear rpg,
+                Dear Vacations,
                 
                 I would like to take this period off : 18/10/21 - 22/10/21.
                 Thanks a lot in advance.
