@@ -55,6 +55,7 @@ class Forest(Location):
             "You are holding your magnificent sword that "
             "you managed to obtain in a previous quest in which you almost lost your life. "
             "You feel ready to face any danger."
+            "After all, you are a proud warrior of the Cult of the Bridge."
         )
         print(
             "In the distance you can see an old abandoned castle. "
@@ -66,8 +67,8 @@ class Forest(Location):
             '"To go to the castle, enter the forest and go east at the carrefour inside the forest"'
         )
         print(
-            "You already heard about this castle in a nearby tavern "
-            "when this maid asked you to get a mysterious scroll. "
+            "You had already heard about this castle in a nearby tavern "
+            "when a maid asked you to get a mysterious scroll. "
             "She told you the scroll content could affect the whole region. "
             "You believe it is a powerful charm or some ancient spell."
         )
