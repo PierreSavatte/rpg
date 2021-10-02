@@ -1,7 +1,7 @@
 from collections import defaultdict
 
 from rpg.objects.potion import Potion
-from rpg.objects.key import Keys
+from rpg.objects.key import RPGKeys
 
 
 class Bag:
@@ -13,7 +13,7 @@ class Bag:
     def add(self, obj):
         if isinstance(obj, Potion):
             self.potions.append(obj)
-        if isinstance(obj, Keys):
+        if isinstance(obj, RPGKeys):
             self.keys.append(obj)
         else:
             name = obj.__class__.__name__.lower()

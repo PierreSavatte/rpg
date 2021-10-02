@@ -1,9 +1,9 @@
+from example.vacation_request.locations.castle.castle_entrance import Castle
+from example.vacation_request.locations.guardian_cabin import GuardianCabin
 from rpg.character import Character
 from rpg.fight import Fight
 from rpg.game_over import GameOver
-from rpg.locations import Location
-from rpg.locations.castle.castle_entrance import Castle
-from rpg.locations.guardian_cabin import GuardianCabin
+from rpg.location import Location
 
 _SPIDER_DEAFEATED = False
 _BOAR_DEAFEATED = False
@@ -86,7 +86,9 @@ class Forest(Location):
             print("Who do you think you are, to try and defy gravity?")
             return ForestEntry
 
-        from rpg.locations.castle.castle_insides import CastleBoss
+        from example.vacation_request.locations.castle.castle_insides import (
+            CastleBoss,
+        )
 
         print("You are a real Chad and don't follow orders.")
         print(

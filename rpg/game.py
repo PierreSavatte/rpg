@@ -16,19 +16,18 @@ class Decision:
 
 
 class Game:
-    def __init__(self):
+    def __init__(self, starting_location):
         name = ask("What is your name?", do_validate=False)
+        self.starting_location = starting_location
         self.player = Character(name=name)
         self.bag = Bag()
         self.powers = []
         self.current_location = None
 
     def start(self):
-        from rpg.locations.forest import Forest
+        start = self.starting_location(game=self, choice_adventurer_made=None)
 
-        forest = Forest(game=self, choice_adventurer_made=None)
-
-        forest.unfold_scenario()
+        start.unfold_scenario()
 
     def take_a_decision(self) -> Decision:
         decision = ask("What do you want to do now?")

@@ -1,5 +1,5 @@
-from rpg.locations import Location
-from rpg.objects.key import Keys
+from rpg.location import Location
+from example.vacation_request.keys import Keys
 
 
 class GuardianCabin(Location):
@@ -16,7 +16,7 @@ class GuardianCabin(Location):
         )
 
     def go_east(self):
-        from rpg.locations.forest import ForestEntry
+        from example.vacation_request.locations.forest import ForestEntry
 
         return ForestEntry
 

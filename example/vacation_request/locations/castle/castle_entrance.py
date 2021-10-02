@@ -1,5 +1,7 @@
-from rpg.locations import Location
-from rpg.locations.castle.castle_insides import CastleInside
+from example.vacation_request.locations.castle.castle_insides import (
+    CastleInside,
+)
+from rpg.location import Location
 
 
 class Castle(Location):
@@ -13,7 +15,7 @@ class Castle(Location):
         return "You arrive in front of the castle. There is a huge door right in front of you"
 
     def go_north(self):
-        from rpg.objects.key import Keys
+        from example.vacation_request.keys import Keys
 
         if Keys.CASTLE_ENTRY in self.game.bag.keys:
             if not Keys.CASTLE_ENTRY.value.door_opened:
@@ -33,7 +35,9 @@ class Castle(Location):
             return CastleDoor
 
     def go_west(self):
-        from rpg.locations.forest import ForestDepthBackwards
+        from example.vacation_request.locations.forest import (
+            ForestDepthBackwards,
+        )
 
         print("You choose to go back. Coward...")
         return ForestDepthBackwards

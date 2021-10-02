@@ -1,6 +1,6 @@
 import time
 
-from rpg.locations import Location
+from rpg.location import Location
 
 
 class CastleInside(Location):
@@ -13,7 +13,7 @@ class CastleInside(Location):
         )
 
     def go_south(self):
-        from rpg.locations.castle.castle_entrance import (
+        from example.vacation_request.locations.castle.castle_entrance import (
             CastleDoorReturned,
         )
 
@@ -21,7 +21,9 @@ class CastleInside(Location):
         return CastleDoorReturned
 
     def go_east(self):
-        from rpg.locations.castle.castle_maze import CastleMaze
+        from example.vacation_request.locations.castle.castle_maze import (
+            CastleMaze,
+        )
 
         print("You choose to go east. Is that a minotaur?")
         return CastleMaze
@@ -68,7 +70,7 @@ class CastleBossDoor(Location):
         pass
 
     def go_north(self):
-        from rpg.objects.key import Keys
+        from example.vacation_request.keys import Keys
 
         print("You try to push the large door.")
         time.sleep(3)

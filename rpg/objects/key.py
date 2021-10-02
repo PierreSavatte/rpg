@@ -1,8 +1,6 @@
 from enum import Enum
 
 from rpg.objects import Object
-from rpg.locations.castle.castle_entrance import Castle
-from rpg.locations.castle.castle_insides import CastleBossDoor
 
 
 class Key(Object):
@@ -24,12 +22,5 @@ class Key(Object):
         return False
 
 
-class Keys(Enum):
-    CASTLE_ENTRY = Key(
-        success_message="You used the key to open the castle door.",
-        correct_place=Castle,
-    )
-    CASTLE_BOSS = Key(
-        success_message="You used the key to open the large door.",
-        correct_place=CastleBossDoor,
-    )
+class RPGKeys(Enum):
+    pass
